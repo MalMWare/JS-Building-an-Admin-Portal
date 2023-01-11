@@ -22,8 +22,9 @@ const mainAdmin = async () => {
                 body: JSON.stringify({'id': m.id, 'quantity': `${input.value}`
             })})
         })
-
-        li.append(m.title, input, button)
+        let p = document.createElement('p')
+        p.textContent = m.title
+        li.append(p, input, button)
         ul.append(li)
     })
     root.append(ul)
